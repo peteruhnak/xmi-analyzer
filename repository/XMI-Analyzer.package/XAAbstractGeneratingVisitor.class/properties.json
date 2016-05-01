@@ -10,5 +10,5 @@
 	"name" : "XAAbstractGeneratingVisitor",
 	"pools" : [
 		 ],
-	"super" : "XmlDomVisitor",
+	"super" : "XMLDOMVisitor",
 	"type" : "normal" }
