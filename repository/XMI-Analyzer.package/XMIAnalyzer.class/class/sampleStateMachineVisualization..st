@@ -2,6 +2,10 @@ examples
 sampleStateMachineVisualization: aModel
 "a SMXModel"
 | m fullName shape shapeLabel shapeNoText regionNest vertexNest smNest pkgNest modelNest |
+	(Smalltalk hasClassNamed: #RTMondriann) ifFalse: [
+		self inform: 'RTMondrian is not available. Install Roassal2 from the catalog.'.
+		^ self
+	].
 	m := RTMondrian new.
 	fullName := [ :each | each name , '[' , (each className withoutPrefix: 'SMX') , ']' ].
 	shape := [ :color | 
