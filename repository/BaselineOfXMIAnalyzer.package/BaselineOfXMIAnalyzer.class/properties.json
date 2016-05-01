@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfXMIAnalyzer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 5/1/2016 15:35",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfXMIAnalyzer",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
