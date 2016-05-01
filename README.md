@@ -36,7 +36,7 @@ Simple Roassal visualization of the content.
 
 ## Usage
 
-{% codeblock lang:smalltalk %}
+```smalltalk
 "get an instance of DOM tree"
 "dom := XMLDOMParser parse: FileLocator home asFileReference / 'prog/xmi/examples/smr2.xml'."
 dom := XMIAnalyzer sampleStateMachineXmi.
@@ -52,7 +52,7 @@ instance inspect.
 
 "Apply a simple Mondrian demo visualization (requires Roassal)"
 (XMIAnalyzer sampleStateMachineVisualization: instance) open.
-{% endcodeblock %}
+```
 
 ## Installation
 
