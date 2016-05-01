@@ -1,0 +1,14 @@
+{
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XACodeGeneratingVisitor",
+	"pools" : [
+		 ],
+	"super" : "XAAbstractGeneratingVisitor",
+	"type" : "normal" }

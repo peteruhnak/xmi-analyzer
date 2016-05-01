@@ -1,0 +1,17 @@
+{
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/29/2016 14:20",
+	"instvars" : [
+		"packageName",
+		"classPrefix",
+		"ownerReference",
+		"useTypeNamespace" ],
+	"name" : "XAAbstractGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

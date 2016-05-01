@@ -1,0 +1,15 @@
+{
+	"category" : "XMI-Analyzer-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"inference",
+		"result" ],
+	"name" : "XATypeInferenceTest",
+	"pools" : [
+		 ],
+	"super" : "XABaseTest",
+	"type" : "normal" }

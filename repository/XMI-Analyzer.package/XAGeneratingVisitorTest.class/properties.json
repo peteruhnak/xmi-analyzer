@@ -1,0 +1,14 @@
+{
+	"category" : "XMI-Analyzer-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"visitor" ],
+	"name" : "XAGeneratingVisitorTest",
+	"pools" : [
+		 ],
+	"super" : "XABaseTest",
+	"type" : "normal" }
