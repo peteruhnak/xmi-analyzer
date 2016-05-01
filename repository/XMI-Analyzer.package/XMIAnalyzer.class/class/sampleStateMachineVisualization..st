@@ -2,9 +2,9 @@ examples
 sampleStateMachineVisualization: aModel
 "a SMXModel"
 | m fullName shape shapeLabel shapeNoText regionNest vertexNest smNest pkgNest modelNest |
-	(Smalltalk hasClassNamed: #RTMondriann) ifFalse: [
+	(Smalltalk hasClassNamed: #RTMondrian) ifFalse: [
 		self inform: 'RTMondrian is not available. Install Roassal2 from the catalog.'.
-		^ self
+		^ nil
 	].
 	m := RTMondrian new.
 	fullName := [ :each | each name , '[' , (each className withoutPrefix: 'SMX') , ']' ].

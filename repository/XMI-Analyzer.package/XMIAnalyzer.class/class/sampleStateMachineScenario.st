@@ -14,4 +14,4 @@ instance := XMIAnalyzer createInstanceOf: dom prefixed: 'SMX'.
 instance inspect.
 
 "Apply a simple Mondrian demo visualization (requires Roassal)"
-(XMIAnalyzer sampleStateMachineVisualization: instance) open.
+(XMIAnalyzer sampleStateMachineVisualization: instance) ifNotNil: #open.
