@@ -19,6 +19,26 @@ The instantiation includes:
 * reference resolution
 	* instead of having string IDs in the DOM, the instances will have proper object references
 
+## Usage
+
+```smalltalk
+"get an instance of DOM tree"
+"dom := XMLDOMParser parse: FileLocator home asFileReference / 'prog/xmi/examples/smr2.xml'."
+dom := XMIAnalyzer sampleStateMachineXmi.
+
+"Generate the necessary classes. Prefix will be added before all generated classes."
+XMIAnalyzer createClassesFor: dom prefixed: 'SMX' in: 'MyGeneratedClasses'.
+
+"Create the instances in the generated classes."
+instance := XMIAnalyzer createInstanceOf: dom prefixed: 'SMX'.
+
+"Inspect the instance"
+instance inspect.
+
+"Apply a simple Mondrian demo visualization (requires Roassal)"
+(XMIAnalyzer sampleStateMachineVisualization: instance) open.
+```
+
 ## Example
 
 In-image example is available after running `XMIAnalyzer>>exampleStateMachineScenario`
@@ -42,24 +62,4 @@ Inspecting the instantiated model
 Simple Roassal visualization of the content.
 
 ![Roassal visualization with Mondrian](docs/visualization.png)
-
-## Usage
-
-```smalltalk
-"get an instance of DOM tree"
-"dom := XMLDOMParser parse: FileLocator home asFileReference / 'prog/xmi/examples/smr2.xml'."
-dom := XMIAnalyzer sampleStateMachineXmi.
-
-"Generate the necessary classes. Prefix will be added before all generated classes."
-XMIAnalyzer createClassesFor: dom prefixed: 'SMX' in: 'MyGeneratedClasses'.
-
-"Create the instances in the generated classes."
-instance := XMIAnalyzer createInstanceOf: dom prefixed: 'SMX'.
-
-"Inspect the instance"
-instance inspect.
-
-"Apply a simple Mondrian demo visualization (requires Roassal)"
-(XMIAnalyzer sampleStateMachineVisualization: instance) open.
-```
 
