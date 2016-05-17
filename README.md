@@ -2,6 +2,15 @@
 
 XMI Analyzer is a (prototype) utility assisting in analyzing XMI files (XMI \subset XML).
 
+## Installation
+
+```
+Metacello new
+	baseline: 'XMIAnalyzer';
+	repository: 'github://peteruhnak/xmi-analyzer/repository';
+	load.
+```
+
 Instead of operating on the DOM this tool will generate appropriate classes for the individual node types and will instantiate them from the XMI.
 
 The instantiation includes:
@@ -54,11 +63,3 @@ instance inspect.
 (XMIAnalyzer sampleStateMachineVisualization: instance) open.
 ```
 
-## Installation
-
-```
-Metacello new
-	baseline: 'XMIAnalyzer';
-	repository: 'github://peteruhnak/xmi-analyzer/repository';
-	load.
-```
