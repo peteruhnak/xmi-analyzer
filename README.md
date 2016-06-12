@@ -2,6 +2,8 @@
 
 XMI Analyzer is a (prototype) utility assisting in analyzing XMI files (XMI \subset XML).
 
+Sponsored by [Synectique ![](http://synectique.eu/templates/st_orddie/images/logo.png)](http://synectique.eu/)
+
 ## Installation
 
 ```
