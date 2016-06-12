@@ -1,5 +1,5 @@
 initialization
 initialize
 	super initialize.
-	idRefs := OrderedCollection new.
+	idRefs := Set new.
 	cache := Dictionary new

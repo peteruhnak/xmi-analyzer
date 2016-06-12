@@ -1,0 +1,14 @@
+{
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XAMagicDrawToMooseGenerator",
+	"pools" : [
+		 ],
+	"super" : "XAObjectInstanceGenerator",
+	"type" : "normal" }

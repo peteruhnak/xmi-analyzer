@@ -1,5 +1,7 @@
 visiting
 visitElement: anElement
+	| result |
+	result := true.
 	(anElement name beginsWith: 'xmi:')
-		ifFalse: [ generator processElement: anElement ].
-	^ super visitElement: anElement
+		ifFalse: [ result := generator processElement: anElement ].
+	result ifNotNil: [ ^ super visitElement: anElement ]

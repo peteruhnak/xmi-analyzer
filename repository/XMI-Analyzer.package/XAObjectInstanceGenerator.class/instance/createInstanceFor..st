@@ -1,3 +1,6 @@
 instantiating
 createInstanceFor: anElement
-	^ self createInstanceFor: anElement class: (self classNameFor: anElement) asClass
+	| name |
+	name := self classNameFor: anElement.
+	name ifNil: [ ^ nil ].
+	^ self createInstanceFor: anElement class: name asClass
