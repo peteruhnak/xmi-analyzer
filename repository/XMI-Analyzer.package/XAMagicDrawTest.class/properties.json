@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "XMLDOMVisitor",
-	"category" : "XMI-Analyzer-Core",
+	"super" : "TestCase",
+	"category" : "XMI-Analyzer-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"generator"
+		"mooseModel"
 	],
-	"name" : "XAAbstractGeneratingVisitor",
+	"name" : "XAMagicDrawTest",
 	"type" : "normal"
 }

@@ -1,14 +1,15 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "XAMagicDrawToMooseGenerator",
-	"pools" : [
-		 ],
+	"commentStamp" : "usmanbhatti 7/4/2016 16:48",
 	"super" : "XAObjectInstanceGenerator",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"node",
+		"parent",
+		"currentElement"
+	],
+	"name" : "XAMagicDrawToMooseGenerator",
+	"type" : "normal"
+}

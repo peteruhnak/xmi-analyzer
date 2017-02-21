@@ -1,14 +1,13 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"collector" ],
-	"name" : "XATypeInferenceVisitor",
-	"pools" : [
-		 ],
 	"super" : "XMLDOMVisitor",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collector"
+	],
+	"name" : "XATypeInferenceVisitor",
+	"type" : "normal"
+}

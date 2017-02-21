@@ -14,21 +14,22 @@ In Moose however, the relationships are different, so you must say in what way.
 
 E.g. you can just do aMooseModel add: aFAMIXPackage. However for other parts attributes are needed. XMI/UML and FAMIX do not have the same model, so its a bit tricky."
 
-	((aParent isKindOf: MooseModel) and: [ aChild isKindOf: FAMIXPackage ])
-		ifTrue: [ ^ aParent add: aChild ].
+	node accept: self.
 	"I don't know how packages inside packages are represented in Moose, there is FAMIXPackageGroup, but that cannot have FAMIXComments..."
-	((aParent isKindOf: FAMIXPackage) and: [ aChild isKindOf: FAMIXPackage ])
+	"((aParent isKindOf: FAMIXPackage) and: [ aChild isKindOf: FAMIXPackage ])
 		ifTrue: [ ^ aParent mooseModel add: aChild ].
 	((aParent isKindOf: FAMIXPackage) and: [ aChild isKindOf: FAMIXType ])
-		ifTrue: [ ^ aParent addType: aChild ].
+		ifTrue: [ ^ aParent addType: aChild ]."
 	"The owner of a Generalization is the child"
-	((aChild isKindOf: FAMIXInheritance) and: [ aName = #generalization ])
+	"((aChild isKindOf: FAMIXInheritance) and: [ aName = #generalization ])
 		ifTrue: [ ^ aParent addSuperInheritance: aChild ].
+	(aChild isKindOf: FAMIXReference)
+		ifTrue: [ ^ aParent addSuperInheritance: aChild ]."
 
 	"Any FAMIXSourcedEntity can have comments"
-	aName = #ownedComment
-		ifTrue: [ ^ aParent addComment: aChild ].
+	"aName = #ownedComment
+		ifTrue: [ ^ aParent addComment: aChild ]."
 	"A Comment in UML has an owner (#ownedComment) and an annotatedElement, but I don't remember the exact mechanics of who the comment is actually commenting... please refer to the specs, here I will just use ownedComment and ignore annotatedElement"
-	aName = #annotatedElement
+	"aName = #annotatedElement
 		ifTrue: [ ^ self ].
-	1 halt
+	1 halt"

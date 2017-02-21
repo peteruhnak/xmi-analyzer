@@ -1,15 +1,14 @@
 {
-	"category" : "XMI-Analyzer-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "XABaseTest",
+	"category" : "XMI-Analyzer-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"inference",
-		"result" ],
+		"result"
+	],
 	"name" : "XATypeInferenceTest",
-	"pools" : [
-		 ],
-	"super" : "XABaseTest",
-	"type" : "normal" }
+	"type" : "normal"
+}

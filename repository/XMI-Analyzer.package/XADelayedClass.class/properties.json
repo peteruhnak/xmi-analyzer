@@ -1,18 +1,17 @@
 {
-	"category" : "XMI-Analyzer-Utility",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/29/2016 11:12",
+	"super" : "Object",
+	"category" : "XMI-Analyzer-Utility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"name",
 		"parent",
 		"package",
 		"instanceVariables",
-		"methods" ],
+		"methods"
+	],
 	"name" : "XADelayedClass",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}
