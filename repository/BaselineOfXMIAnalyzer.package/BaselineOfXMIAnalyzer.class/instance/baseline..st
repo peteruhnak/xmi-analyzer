@@ -1,10 +1,10 @@
-as yet unclassified
+baselines
 baseline: spec
 	<baseline>
 	spec
 		for: #common
-		do: [ spec
-				baseline: 'XMLDOMVisitor'
-				with: [ spec repository: 'github://peteruhnak/xml-dom-visitor/repository' ].
-			spec package: 'XMI-Analyzer' with: [ spec requires: #('XMLDOMVisitor') ].
+		do: [ self
+				xmlDomVisitor: spec;
+				famix: spec.
+			spec package: 'XMI-Analyzer' with: [ spec requires: #('XMLDOMVisitor' 'Famix') ].
 			spec group: 'default' with: #('XMI-Analyzer') ]
