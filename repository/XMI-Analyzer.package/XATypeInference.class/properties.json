@@ -1,16 +1,15 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/29/2016 14:27",
+	"super" : "Object",
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"visitor",
 		"idRefs",
-		"cache" ],
+		"cache"
+	],
 	"name" : "XATypeInference",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

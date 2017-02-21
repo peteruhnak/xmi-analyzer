@@ -1,14 +1,13 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/28/2016 14:07",
-	"instvars" : [
-		"classes" ],
-	"name" : "XAClassStructureGenerator",
-	"pools" : [
-		 ],
 	"super" : "XAAbstractGenerator",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classes"
+	],
+	"name" : "XAClassStructureGenerator",
+	"type" : "normal"
+}

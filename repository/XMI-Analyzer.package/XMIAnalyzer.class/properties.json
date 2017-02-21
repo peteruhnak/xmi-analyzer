@@ -1,14 +1,11 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/29/2016 16:07",
-	"instvars" : [
-		 ],
-	"name" : "XMIAnalyzer",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMIAnalyzer",
+	"type" : "normal"
+}

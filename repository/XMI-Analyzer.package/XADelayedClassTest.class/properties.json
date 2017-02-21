@@ -1,14 +1,13 @@
 {
-	"category" : "XMI-Analyzer-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"delayedClass" ],
-	"name" : "XADelayedClassTest",
-	"pools" : [
-		 ],
 	"super" : "XABaseTest",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"delayedClass"
+	],
+	"name" : "XADelayedClassTest",
+	"type" : "normal"
+}

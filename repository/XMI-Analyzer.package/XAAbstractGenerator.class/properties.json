@@ -1,17 +1,16 @@
 {
-	"category" : "XMI-Analyzer-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/29/2016 14:20",
+	"super" : "Object",
+	"category" : "XMI-Analyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"packageName",
 		"classPrefix",
 		"ownerReference",
-		"useTypeNamespace" ],
+		"useTypeNamespace"
+	],
 	"name" : "XAAbstractGenerator",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

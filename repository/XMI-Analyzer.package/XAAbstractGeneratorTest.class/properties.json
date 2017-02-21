@@ -1,14 +1,13 @@
 {
-	"category" : "XMI-Analyzer-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"generator" ],
-	"name" : "XAAbstractGeneratorTest",
-	"pools" : [
-		 ],
 	"super" : "XABaseTest",
-	"type" : "normal" }
+	"category" : "XMI-Analyzer-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"generator"
+	],
+	"name" : "XAAbstractGeneratorTest",
+	"type" : "normal"
+}
