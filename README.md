@@ -1,8 +1,11 @@
 # XMI Analyzer [![Build Status](https://travis-ci.org/peteruhnak/xmi-analyzer.svg?branch=master)](https://travis-ci.org/peteruhnak/xmi-analyzer)
 
-XMI Analyzer is a (prototype) utility assisting in analyzing XMI files (XMI \subset XML).
+XMI Analyzer is a (prototype) utility assisting in analyzing XMI files.
 
 Sponsored by [Synectique ![](http://synectique.eu/templates/st_orddie/images/logo.png)](http://synectique.eu/)
+
+
+Note that XMI is a subset of XML with specific rulues; for free-form-ish XML you might be interested in [https://github.com/peteruhnak/xml-magritte-generator](xml-magritte-generator)
 
 ## Installation
 
