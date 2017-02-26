@@ -1,4 +1,4 @@
-# XMI Analyzer [![Build Status](https://travis-ci.org/peteruhnak/xmi-analyzer.svg?branch=master)](https://travis-ci.org/peteruhnak/xmi-analyzer)
+# XMI Analyzer [![Build Status](https://travis-ci.org/peteruhnak/xmi-analyzer.svg?branch=master)](https://travis-ci.org/peteruhnak/xmi-analyzer) [![Test Status](https://api.bob-bench.org/v1/badgeByUrl?branch=master&hosting=github&ci=travis-ci&repo=peteruhnak%2Fxmi-analyzer)](https://bob-bench.org/r/gh/peteruhnak/xmi-analyzer)
 
 XMI Analyzer is a (prototype) utility assisting in analyzing XMI files.
 
