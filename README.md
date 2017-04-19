@@ -6,7 +6,12 @@ XMI Analyzer is a (prototype) utility assisting in analyzing XMI files.
 Sponsored by [Synectique ![](http://synectique.eu/templates/st_orddie/images/logo.png)](http://synectique.eu/)
 
 
-Note that XMI is a subset of XML with specific rulues; for free-form-ish XML you might be interested in [https://github.com/peteruhnak/xml-magritte-generator](xml-magritte-generator)
+Note that XMI is a subset of XML with rather specific rulues.
+
+* For free-form-ish XML you might be interested in https://github.com/peteruhnak/xml-magritte-generator
+* For generic XMI see https://github.com/OpenPonk/xmi
+	* this project should migrate to use that at some point
+
 
 ## Installation
 
@@ -68,4 +73,3 @@ Inspecting the instantiated model
 Simple Roassal visualization of the content.
 
 ![Roassal visualization with Mondrian](docs/visualization.png)
-
