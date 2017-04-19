@@ -1,12 +1,21 @@
 SmalltalkCISpec {
 	#loading : [
 		SCIMetacelloLoadSpec {
+			#platforms : [
+				#pharo
+			],
 			#baseline : 'XMIAnalyzer',
-			#directory : 'repository',
-			#platforms : [ #pharo ]
+			#directory : 'repository'
 		}
 	],
 	#testing : {
-		#packages : [ 'XMI-Analyzer.*' ]
+		#coverage : {
+			#packages : [
+				'XMI-Analyzer'
+			]
+		},
+		#packages : [
+			'XMI-Analyzer'
+		]
 	}
 }
