@@ -90,7 +90,7 @@ XAMagicDrawTest >> setUp [
 	dom := XMLDOMParser parse: self magicDrawExample.
 	umlModel := dom root elements second.	"selecting just the <uml:Model> node with its children"
 	visitor := XAInstanceGeneratingVisitor new.
-	visitor generator: XAMagicDrawToMooseGenerator new.
+	visitor generator: (XAMagicDrawToMooseGenerator factory: FamixTest1Model factory).
 	visitor generator inferTypesIn: umlModel.
 	visitor classPrefix: ''.
 	visitor visit: umlModel.
@@ -100,7 +100,7 @@ XAMagicDrawTest >> setUp [
 
 { #category : #tests }
 XAMagicDrawTest >> testComments [
-	self assert:  mooseModel allPackages first comments size > 0 description: 'No Packages found in MooseModel'.
+	self assert: mooseModel allPackages first comments size > 0 description: 'No Packages found in MooseModel'.
 	self assert: mooseModel allPackages first comments first content size > 0 description: 'Comment cannot be empty'
 ]
 

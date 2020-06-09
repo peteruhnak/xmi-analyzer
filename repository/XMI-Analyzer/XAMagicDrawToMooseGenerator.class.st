@@ -7,24 +7,32 @@ Class {
 	#instVars : [
 		'node',
 		'parent',
-		'currentElement'
+		'currentElement',
+		'factory'
 	],
 	#category : #'XMI-Analyzer-Core'
 }
 
 { #category : #example }
 XAMagicDrawToMooseGenerator class >> example [
-|dom model visitor|
-dom := XMLDOMParser parse: FileLocator home asFileReference / 'prog/synectique/nck_Niveau_1.xmi'.
-model := dom root elements second.
+	| dom model visitor |
+	dom := XMLDOMParser parse: FileLocator home asFileReference / 'prog/synectique/nck_Niveau_1.xmi'.
+	model := dom root elements second.
 
-visitor := XAInstanceGeneratingVisitor new.
-visitor generator: XAMagicDrawToMooseGenerator new.
-visitor generator inferTypesIn: model.
-visitor classPrefix: ''.
-visitor visit: dom root elements second.
-visitor generator resolveReferences.
-model := visitor generator topInstance.
+	visitor := XAInstanceGeneratingVisitor new.
+	visitor generator: (self factory: FamixTest1Model factory).
+	visitor generator inferTypesIn: model.
+	visitor classPrefix: ''.
+	visitor visit: dom root elements second.
+	visitor generator resolveReferences.
+	model := visitor generator topInstance
+]
+
+{ #category : #initialize }
+XAMagicDrawToMooseGenerator class >> factory: aFMMetamodelFactory [
+	^ self new
+		factory: aFMMetamodelFactory;
+		yourself
 ]
 
 { #category : #instantiating }
@@ -66,26 +74,33 @@ E.g. you can just do aMooseModel add: aFAMIXPackage. However for other parts att
 
 { #category : #normalizing }
 XAMagicDrawToMooseGenerator >> classNameFor: anElementName type: aTypeName [
+	factory
+		ifNil: [ self
+				error:
+					'This XMI generator needs to be configured with a metamodel factory. For example, if you generate a Famix smalltalk model you need to set `factory: FamixStModel factory`.' ].
 	^ (Dictionary new
-		at: 'uml:Model' put: #MooseModel;
-		at: 'uml:Package' put: #CPPSPackage;
-		at: 'uml:Comment' put: #FAMIXComment;
-		at: 'uml:Enumeration' put: #FAMIXEnum;
-		at: 'uml:Class' put: #FAMIXClass;
-		at: 'uml:Generalization' put: #CPPSInheritance;
+		at: 'uml:Model' put: factory modelClass name asSymbol;
+		at: 'uml:Package' put: ((factory entityNamed: #Package ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
+		at: 'uml:Comment' put: ((factory entityNamed: #Comment ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
+		at: 'uml:Enumeration' put: ((factory entityNamed: #Enum ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
+		at: 'uml:Class' put: ((factory entityNamed: #Class ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
+		at: 'uml:Generalization' put: ((factory entityNamed: #Inheritance ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
 		"currently we do not take into account uml:dependency"
-		at: 'uml:Dependency' put: nil;
+			at: 'uml:Dependency' put: nil;
 		"We are not interested in attributes, associations and other things"
 			at: 'uml:Property' put: nil;
 		at: 'uml:Association' put: nil;
-		yourself)
-		at: aTypeName
-		ifAbsent: [ 	super classNameFor: anElementName type: aTypeName ]
+		yourself) at: aTypeName ifAbsent: [ super classNameFor: anElementName type: aTypeName ]
 ]
 
 { #category : #instantiating }
 XAMagicDrawToMooseGenerator >> elementName [
 	^ currentElement attributeAt: 'name'
+]
+
+{ #category : #accessing }
+XAMagicDrawToMooseGenerator >> factory: anObject [
+	factory := anObject
 ]
 
 { #category : #instantiating }
