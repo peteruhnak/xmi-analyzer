@@ -9,7 +9,7 @@ Class {
 		'parent',
 		'currentElement'
 	],
-	#category : 'XMI-Analyzer-Core'
+	#category : #'XMI-Analyzer-Core'
 }
 
 { #category : #example }
@@ -68,11 +68,11 @@ E.g. you can just do aMooseModel add: aFAMIXPackage. However for other parts att
 XAMagicDrawToMooseGenerator >> classNameFor: anElementName type: aTypeName [
 	^ (Dictionary new
 		at: 'uml:Model' put: #MooseModel;
-		at: 'uml:Package' put: #FAMIXPackage;
+		at: 'uml:Package' put: #CPPSPackage;
 		at: 'uml:Comment' put: #FAMIXComment;
 		at: 'uml:Enumeration' put: #FAMIXEnum;
 		at: 'uml:Class' put: #FAMIXClass;
-		at: 'uml:Generalization' put: #FAMIXInheritance;
+		at: 'uml:Generalization' put: #CPPSInheritance;
 		"currently we do not take into account uml:dependency"
 		at: 'uml:Dependency' put: nil;
 		"We are not interested in attributes, associations and other things"

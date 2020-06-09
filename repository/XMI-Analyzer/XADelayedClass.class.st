@@ -25,7 +25,7 @@ Class {
 		'instanceVariables',
 		'methods'
 	],
-	#category : 'XMI-Analyzer-Utility'
+	#category : #'XMI-Analyzer-Utility'
 }
 
 { #category : #'as yet unclassified' }
@@ -133,7 +133,8 @@ XADelayedClass >> saveClass [
 		subclass: name
 		instanceVariableNames: (self instanceVariables joinUsing: ' ')
 		classVariableNames: ''
-		package: package
+		poolDictionaries: ''
+		category: package
 ]
 
 { #category : #accessing }

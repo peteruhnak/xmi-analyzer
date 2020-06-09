@@ -4,7 +4,7 @@ I am a baseline for https://github.com/peteruhnak/xmi-analyzer
 Class {
 	#name : #BaselineOfXMIAnalyzer,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfXMIAnalyzer'
+	#category : #BaselineOfXMIAnalyzer
 }
 
 { #category : #baselines }
@@ -32,7 +32,5 @@ BaselineOfXMIAnalyzer >> famix: spec [
 
 { #category : #dependencies }
 BaselineOfXMIAnalyzer >> xmlDomVisitor: spec [
-	spec
-		baseline: 'XMLDOMVisitor'
-		with: [ spec repository: 'github://peteruhnak/xml-dom-visitor/repository' ]
+	spec baseline: 'XMLDOMVisitor' with: [ spec repository: 'github://OpenPonk/xml-dom-visitor/repository' ]
 ]
