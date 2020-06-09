@@ -1,7 +1,7 @@
 Class {
 	#name : #XABaseTest,
 	#superclass : #TestCase,
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #accessing }

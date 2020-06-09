@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'generator'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #accessing }

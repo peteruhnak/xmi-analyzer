@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'visitor'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #'instance creation' }

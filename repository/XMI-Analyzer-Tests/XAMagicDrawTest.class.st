@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'mooseModel'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #'as yet unclassified' }

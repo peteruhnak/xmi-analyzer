@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'delayedClass'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #running }

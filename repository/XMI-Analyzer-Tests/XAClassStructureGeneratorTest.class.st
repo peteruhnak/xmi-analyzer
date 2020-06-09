@@ -1,7 +1,7 @@
 Class {
 	#name : #XAClassStructureGeneratorTest,
 	#superclass : #XAAbstractGeneratorTest,
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #accessing }

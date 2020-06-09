@@ -5,7 +5,7 @@ Class {
 		'inference',
 		'result'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #'instance creation' }

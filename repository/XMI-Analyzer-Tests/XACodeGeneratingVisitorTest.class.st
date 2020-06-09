@@ -1,7 +1,7 @@
 Class {
 	#name : #XACodeGeneratingVisitorTest,
 	#superclass : #XAGeneratingVisitorTest,
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #tests }

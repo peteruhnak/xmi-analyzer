@@ -1,7 +1,7 @@
 Class {
 	#name : #XMIAnalayzerTest,
 	#superclass : #XABaseTest,
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #'instance creation' }

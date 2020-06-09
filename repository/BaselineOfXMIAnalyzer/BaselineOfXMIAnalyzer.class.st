@@ -15,8 +15,14 @@ BaselineOfXMIAnalyzer >> baseline: spec [
 		do: [ self
 				xmlDomVisitor: spec;
 				famix: spec.
-			spec package: 'XMI-Analyzer' with: [ spec requires: #('XMLDOMVisitor' 'Famix') ].
-			spec group: 'default' with: #('XMI-Analyzer') ]
+
+			spec
+				package: 'XMI-Analyzer' with: [ spec requires: #('XMLDOMVisitor' 'Famix') ];
+				package: 'XMI-Analyzer-Tests' with: [ spec requires: #('XMI-Analyzer') ].
+
+			spec
+				group: 'Core' with: #('XMI-Analyzer');
+				group: 'Tests' with: #('XMI-Analyzer-Tests') ]
 ]
 
 { #category : #dependencies }

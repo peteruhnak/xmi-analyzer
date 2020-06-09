@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'codeVisitor'
 	],
-	#category : 'XMI-Analyzer-Tests'
+	#category : #'XMI-Analyzer-Tests'
 }
 
 { #category : #running }
