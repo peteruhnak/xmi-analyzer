@@ -44,7 +44,7 @@ XADelayedClassTest >> testBasicClass [
 	self assert: cls className equals: self classPrefix , 'Delayed class'.
 	self assert: cls superclass equals: Object.
 	self assert: cls package name equals: self packageName.
-	self assert: cls instanceVariables equals: #()
+	self assert: cls instVarNames equals: #()
 ]
 
 { #category : #tests }
