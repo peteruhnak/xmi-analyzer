@@ -1,11 +1,14 @@
 language: smalltalk
 sudo: false
 
-# Select operating system(s)
 os:
   - linux
-#  - osx
 
-# Select compatible Smalltalk image(s)
 smalltalk:
-  - Pharo-5.0
+  - Pharo64-9.0
+  - Pharo64-8.0
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - smalltalk: Pharo64-9.0
