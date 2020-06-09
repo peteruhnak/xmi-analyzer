@@ -34,8 +34,8 @@ XAGeneratingVisitorTest >> setUp [
 
 { #category : #running }
 XAGeneratingVisitorTest >> tearDown [
-	super tearDown.
-	self cleanUpPackage
+	self cleanUpPackage.
+	super tearDown
 ]
 
 { #category : #accessing }

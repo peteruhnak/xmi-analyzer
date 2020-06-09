@@ -18,7 +18,8 @@ XADelayedClassTest >> setUp [
 
 { #category : #running }
 XADelayedClassTest >> tearDown [
-	delayedClass realClass ifNotNil: [ :cls | cls removeFromSystem ]
+	delayedClass realClass ifNotNil: [ :cls | cls removeFromSystem ].
+	super tearDown
 ]
 
 { #category : #tests }

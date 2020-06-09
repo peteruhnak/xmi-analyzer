@@ -74,6 +74,6 @@ XAAbstractGeneratorTest >> setUp [
 
 { #category : #running }
 XAAbstractGeneratorTest >> tearDown [
-	super tearDown.
-	self cleanUpPackage
+	self cleanUpPackage.
+	super tearDown
 ]

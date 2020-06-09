@@ -83,9 +83,10 @@ XAMagicDrawTest >> magicDrawExample [
 </xmi:XMI>'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #running }
 XAMagicDrawTest >> setUp [
 	| dom umlModel visitor |
+	super setUp.
 	dom := XMLDOMParser parse: self magicDrawExample.
 	umlModel := dom root elements second.	"selecting just the <uml:Model> node with its children"
 	visitor := XAInstanceGeneratingVisitor new.
@@ -97,29 +98,29 @@ XAMagicDrawTest >> setUp [
 	mooseModel := visitor generator topInstance
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 XAMagicDrawTest >> testComments [
 	self assert:  mooseModel allPackages first comments size > 0 description: 'No Packages found in MooseModel'.
 	self assert: mooseModel allPackages first comments first content size > 0 description: 'Comment cannot be empty'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 XAMagicDrawTest >> testInheritance [
 	self skip: 'Broken for unknown reason (skipped to pass through CI); https://github.com/peteruhnak/xmi-analyzer/issues/4'.
 	self assert: mooseModel allTypes first superInheritances first to isNotNil description: 'Super class of the inheritance is nil'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 XAMagicDrawTest >> testNumberOfPackages [
 	self assert:  mooseModel allPackages size equals: 2
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 XAMagicDrawTest >> testPackageRelationship [
 	self assert: (mooseModel allPackages entityNamed: 'BSL1') parentPackage name equals: 'NIVEAU1'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 XAMagicDrawTest >> testTypes [
 	self assert:  mooseModel allTypes size equals: 6.
 	self assert: mooseModel allTypes first container name equals: 'NIVEAU1'.

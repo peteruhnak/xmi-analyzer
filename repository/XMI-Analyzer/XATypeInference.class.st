@@ -11,7 +11,7 @@ Class {
 		'idRefs',
 		'cache'
 	],
-	#category : 'XMI-Analyzer-Core'
+	#category : #'XMI-Analyzer-Core'
 }
 
 { #category : #accessing }
@@ -52,20 +52,15 @@ XATypeInference >> castAttribute: anAttribute [
 XATypeInference >> chooseBetween: oneType and: secondType [
 	| types |
 	types := Set with: oneType with: secondType.
-	types size = 1
-		ifTrue: [ ^ types anyOne ].
-	(types includes: #String)
-		ifTrue: [ ^ #String ].
-	(types includes: #EMPTY)
-		ifTrue: [ ^ types detect: [ :each | (each = #EMPTY) not ] ].
-	(types includes: #Integer)
-		ifTrue: [ ^ types detect: [ :each | (each = #Integer) not ] ].
-	(types includes: #IDREF) & (types includes: #IDREFS)
-		ifTrue: [ ^ #IDREFS ].
+	types size = 1 ifTrue: [ ^ types anyOne ].
+	(types includes: #String) ifTrue: [ ^ #String ].
+	(types includes: #EMPTY) ifTrue: [ ^ types detect: [ :each | each ~= #EMPTY ] ].
+	(types includes: #Integer) ifTrue: [ ^ types detect: [ :each | each ~= #Integer ] ].
+	(types includes: #IDREF) & (types includes: #IDREFS) ifTrue: [ ^ #IDREFS ].
 	self error: 'Unhandled case'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #resolving }
 XATypeInference >> collectIdsFrom: aDocument [
 	^ ((aDocument allElements collect: [ :each | each attributeAt: #xmi:id ]) reject: #isEmpty) asSet
 ]

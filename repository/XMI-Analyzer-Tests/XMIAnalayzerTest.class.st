@@ -9,16 +9,16 @@ XMIAnalayzerTest >> newDom [
 	^ XMIAnalyzer sampleStateMachineXmi
 ]
 
-{ #category : #tests }
+{ #category : #running }
 XMIAnalayzerTest >> tearDown [
-	super tearDown.
-	self cleanUpPackage
+	self cleanUpPackage.
+	super tearDown
 ]
 
 { #category : #tests }
 XMIAnalayzerTest >> testCreateClasses [
 	XMIAnalyzer createClassesFor: self newDom prefixed: self classPrefix in: self packageName.
-	self assert: (RPackage organizer packageNamed: self packageName) classes isNotEmpty
+	self denyEmpty: (RPackage organizer packageNamed: self packageName) classes
 ]
 
 { #category : #tests }
