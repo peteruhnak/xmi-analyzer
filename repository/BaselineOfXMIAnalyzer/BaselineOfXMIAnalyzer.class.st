@@ -18,7 +18,9 @@ BaselineOfXMIAnalyzer >> baseline: spec [
 
 			spec
 				package: 'XMI-Analyzer' with: [ spec requires: #('XMLDOMVisitor' 'Famix') ];
-				package: 'XMI-Analyzer-Tests' with: [ spec requires: #('XMI-Analyzer') ].
+				package: 'XMI-Analyzer-Tests-Generator' with: [ spec requires: #('FamixGenerator') ];
+				package: 'XMI-Analyzer-Tests-Entities' with: [ spec requires: #('Famix') ];
+				package: 'XMI-Analyzer-Tests' with: [ spec requires: #('XMI-Analyzer' 'XMI-Analyzer-Tests-Entities') ].
 
 			spec
 				group: 'Core' with: #('XMI-Analyzer');
@@ -28,12 +30,11 @@ BaselineOfXMIAnalyzer >> baseline: spec [
 { #category : #dependencies }
 BaselineOfXMIAnalyzer >> famix: spec [
 	spec
-		project: 'Famix'
-		with: [ spec
-				className: #ConfigurationOfFamix;
-				versionString: #stable;
-				loads: #('Core');
-				repository: 'http://smalltalkhub.com/mc/Moose/Famix/main/' ]
+		baseline: 'Famix'
+			with: [ spec
+				loads: 'BasicTraits';
+				repository: 'github://moosetechnology/Famix:development/src' ];
+		project: 'FamixGenerator' copyFrom: 'Famix' with: [ spec loads: 'Basic' ]
 ]
 
 { #category : #dependencies }

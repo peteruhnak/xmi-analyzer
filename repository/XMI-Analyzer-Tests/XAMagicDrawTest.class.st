@@ -90,7 +90,7 @@ XAMagicDrawTest >> setUp [
 	dom := XMLDOMParser parse: self magicDrawExample.
 	umlModel := dom root elements second.	"selecting just the <uml:Model> node with its children"
 	visitor := XAInstanceGeneratingVisitor new.
-	visitor generator: (XAMagicDrawToMooseGenerator factory: FamixTest1Model factory).
+	visitor generator: (XAMagicDrawToMooseGenerator factory: XMIATestModel factory).
 	visitor generator inferTypesIn: umlModel.
 	visitor classPrefix: ''.
 	visitor visit: umlModel.
@@ -107,7 +107,7 @@ XAMagicDrawTest >> testComments [
 { #category : #tests }
 XAMagicDrawTest >> testInheritance [
 	self skip: 'Broken for unknown reason (skipped to pass through CI); https://github.com/peteruhnak/xmi-analyzer/issues/4'.
-	self assert: mooseModel allTypes first superInheritances first to isNotNil description: 'Super class of the inheritance is nil'
+	self assert: (mooseModel entityNamed: #'NIVEAU1::K103FR10') superInheritances first target isNotNil description: 'Super class of the inheritance is nil'
 ]
 
 { #category : #tests }
@@ -122,7 +122,6 @@ XAMagicDrawTest >> testPackageRelationship [
 
 { #category : #tests }
 XAMagicDrawTest >> testTypes [
-	self assert:  mooseModel allTypes size equals: 6.
-	self assert: mooseModel allTypes first container name equals: 'NIVEAU1'.
-	self assert: mooseModel allTypes second container name equals: 'BSL1'
+	self assert: mooseModel allTypes size equals: 6.
+	self assertCollection: (mooseModel allTypes collect: [ :type | type typeContainer name ]) hasSameElements: #('BSL1' 'NIVEAU1')
 ]

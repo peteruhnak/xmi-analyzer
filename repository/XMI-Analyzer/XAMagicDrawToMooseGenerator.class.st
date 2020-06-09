@@ -174,10 +174,10 @@ XAMagicDrawToMooseGenerator >> visitModel: aMooseModel [
 { #category : #visiting }
 XAMagicDrawToMooseGenerator >> visitPackage: aPackage [
 	 aPackage name: self elementName.
-	(parent class = MooseModel) 
+	(parent isKindOf: MooseModel) 
 		ifFalse: [
 			aPackage mooseModel: parent mooseModel. 
-			parent addChildNamedEntity: aPackage.
+			parent addChildEntity: aPackage.
 			]
 		ifTrue: [ aPackage mooseModel: parent ]
 ]
