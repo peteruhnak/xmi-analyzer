@@ -1,1 +1,0 @@
-I analyze an XMI file and generate a semi-appropriate object representation by creating new classes in a target package.

@@ -1,1 +1,0 @@
-Extracts UML description from XMI exported from Magic draw and creates a moose model for these entities.

@@ -1,1 +1,0 @@
-I provide some common interface to both class and object generators.

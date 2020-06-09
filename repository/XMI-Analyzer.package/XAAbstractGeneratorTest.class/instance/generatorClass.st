@@ -1,3 +1,0 @@
-accessing
-generatorClass
-	^ self subclassResponsibility
