@@ -1,8 +1,8 @@
 Class {
 	#name : #XMIATestEnum,
 	#superclass : #XMIATestEntity,
-	#traits : 'FamixTType + FamixTWithEnumValues',
-	#classTraits : 'FamixTType classTrait + FamixTWithEnumValues classTrait',
+	#traits : 'FamixTEnum',
+	#classTraits : 'FamixTEnum classTrait',
 	#category : #'XMI-Analyzer-Tests-Entities-Entities'
 }
 

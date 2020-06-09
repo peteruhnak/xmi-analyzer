@@ -87,8 +87,7 @@ XMIAnalyzerTestGenerator >> defineHierarchy [
 	comment --|> #TComment.
 	comment --|> #TWithComments.
 
-	enum --|> #TWithEnumValues.
-	enum --|> #TType.
+	enum --|> #TEnum.
 
 	inheritance --|> #TInheritance.
 
