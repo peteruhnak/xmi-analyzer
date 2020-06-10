@@ -83,12 +83,12 @@ XAMagicDrawToMooseGenerator >> classNameFor: anElementName type: aTypeName [
 		at: 'uml:Package' put: ((factory entityNamed: #Package ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
 		at: 'uml:Comment' put: ((factory entityNamed: #Comment ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
 		at: 'uml:Enumeration' put: ((factory entityNamed: #Enum ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
-		at: 'uml:Class' put: ((factory entityNamed: #Class ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
+		at: 'uml:Class' put: ((factory entityNamed: #Class ifAbsent: [ factory entityNamed: #Type ifAbsent: [ nil ] ]) ifNotNil: [ :c | c name asSymbol ]);
 		at: 'uml:Generalization' put: ((factory entityNamed: #Inheritance ifAbsent: [ nil ]) ifNotNil: [ :c | c name asSymbol ]);
 		"currently we do not take into account uml:dependency"
-			at: 'uml:Dependency' put: nil;
+		at: 'uml:Dependency' put: nil;
 		"We are not interested in attributes, associations and other things"
-			at: 'uml:Property' put: nil;
+		at: 'uml:Property' put: nil;
 		at: 'uml:Association' put: nil;
 		yourself) at: aTypeName ifAbsent: [ super classNameFor: anElementName type: aTypeName ]
 ]
