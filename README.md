@@ -1,3 +1,9 @@
+# **REPO MIGRATED TO https://github.com/moosetechnology/xmi-analyzer**
+
+I no longer maintain this project, please follow the link above.
+
+---
+
 # XMI Analyzer
 [![Build Status](https://travis-ci.org/peteruhnak/xmi-analyzer.svg?branch=master)](https://travis-ci.org/peteruhnak/xmi-analyzer) [![Coverage Status](https://coveralls.io/repos/github/peteruhnak/xmi-analyzer/badge.svg?branch=master)](https://coveralls.io/github/peteruhnak/xmi-analyzer?branch=master)
 
